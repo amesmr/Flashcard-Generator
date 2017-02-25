@@ -1,5 +1,7 @@
 // dependency for inquirer npm package
 var inquirer = require("inquirer");
+var fs = require("fs");
+var os = require("os");
 
 questions = [{
         q: "Each of a classic Rubik's Cube six faces is covered by ... stickers.",
@@ -47,26 +49,40 @@ questions = [{
     }
 ]
 
+var count = 0;
 
 function BasicFlashcard(q, a) {
-    this.front = q;
-    this.back = a;
+    if (this instanceof BasicFlashcard) {
+        this.front = q;
+        this.back = a;
+        fs.writeFile("basic" + count + ".txt", "{" + os.EOL + "  front: " + this.front + ";" + os.EOL + "  back: " + this.back + os.EOL + "}", function (err) {
+            if (err) throw err;
+        });
+    } else {
+        return new BasicFlashcard(q, a);
+    }
 }
 
 
 BasicFlashcard.prototype.showQuestion = function () {
-    console.log(this.front);
-
+    return this.front;
 };
 
 function ClozeFlashcard(q, a) {
-    this.text = q;
-    this.cloze = a;
+    if (this instanceof ClozeFlashcard) {
+        this.text = q;
+        this.cloze = a;
+        fs.writeFile("cloze" + count + ".txt", "{" + os.EOL + "  text: " + this.text + ";" + os.EOL + "  cloze: " + this.cloze + os.EOL + "}", function (err) {
+            if (err) throw err;
+        });
+    } else {
+        return new ClozeFlashcard(q, a);
+    }
 }
 
 
 ClozeFlashcard.prototype.showAnswer = function () {
-    console.log(this.cloze);
+    return this.cloze;
 };
 
 var count = 0;
@@ -77,11 +93,10 @@ function askQuestion() {
 
     var basic = new BasicFlashcard(questions[count].q, questions[count].a);
     var cloze = new ClozeFlashcard(questions[count].q, questions[count].a);
-    basic.showQuestion();
 
     inquirer.prompt([{
         name: "answer",
-        message: "..."
+        message: basic.showQuestion()
     }]).then(function (answ) {
         // basic here
         if (answ.answer.toLowerCase() == basic.back.toLowerCase()) {

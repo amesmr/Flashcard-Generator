@@ -1,0 +1,4 @@
+{
+  front: Each of a classic Rubik's Cube six faces is covered by ... stickers.;
+  back: 9
+}

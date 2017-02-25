@@ -1,0 +1,4 @@
+{
+  front: The ... is the world’s largest and most powerful particle accelerator.;
+  back: Large Hadron Collider
+}

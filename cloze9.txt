@@ -1,0 +1,4 @@
+{
+  text: ... was the name of the first electronic general-purpose computer.;
+  cloze: ENIAC
+}

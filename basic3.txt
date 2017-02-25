@@ -1,0 +1,4 @@
+{
+  front: In our solar system ... rotate clockwise.;
+  back: Venus and Uranus
+}

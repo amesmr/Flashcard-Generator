@@ -1,0 +1,4 @@
+{
+  front: ... is an ancient analog computer that was discovered by divers off a Greek island in 1900.;
+  back: Antikythera mechanism
+}

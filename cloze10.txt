@@ -1,0 +1,4 @@
+{
+  text: ... is the main protagonist in the Legend of Zelda series of video games.;
+  cloze: Link
+}

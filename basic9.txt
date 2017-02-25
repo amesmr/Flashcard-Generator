@@ -1,0 +1,4 @@
+{
+  front: ... was the name of the first electronic general-purpose computer.;
+  back: ENIAC
+}

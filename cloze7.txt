@@ -1,0 +1,4 @@
+{
+  text: ... is an ancient analog computer that was discovered by divers off a Greek island in 1900.;
+  cloze: Antikythera mechanism
+}
