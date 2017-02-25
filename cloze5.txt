@@ -1,4 +1,0 @@
-{
-  text: The ... is the world’s largest and most powerful particle accelerator.;
-  cloze: Large Hadron Collider
-}

@@ -1,4 +1,0 @@
-{
-  text: ... is the most abundant element in the earth's atmosphere.;
-  cloze: Nitrogen
-}

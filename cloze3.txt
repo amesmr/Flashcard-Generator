@@ -1,4 +1,0 @@
-{
-  text: In our solar system ... rotate clockwise.;
-  cloze: Venus and Uranus
-}

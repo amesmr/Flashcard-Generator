@@ -1,4 +1,0 @@
-{
-  front: ... is the most abundant element in the earth's atmosphere.;
-  back: Nitrogen
-}

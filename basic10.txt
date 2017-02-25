@@ -1,4 +1,0 @@
-{
-  front: ... is the main protagonist in the Legend of Zelda series of video games.;
-  back: Link
-}

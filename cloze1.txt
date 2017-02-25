@@ -1,4 +1,0 @@
-{
-  text: Bruce Willis played a convict turned time traveler in ....;
-  cloze: 12 Monkeys
-}

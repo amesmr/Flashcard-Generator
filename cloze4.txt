@@ -1,4 +1,0 @@
-{
-  text: One kilobyte is equal to ... bytes.;
-  cloze: 1024
-}

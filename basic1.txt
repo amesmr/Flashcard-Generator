@@ -1,4 +1,0 @@
-{
-  front: Bruce Willis played a convict turned time traveler in ....;
-  back: 12 Monkeys
-}
