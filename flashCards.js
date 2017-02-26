@@ -85,6 +85,12 @@ ClozeFlashcard.prototype.showAnswer = function () {
     return this.cloze;
 };
 
+ClozeFlashcard.prototype.wholeAnswer = function () {
+        return this.text.replace("...", this.cloze);
+};
+
+
+
 var count = 0;
 var right = 0;
 var wrong = 0;
@@ -100,19 +106,18 @@ function askQuestion() {
     }]).then(function (answ) {
         // basic here
         if (answ.answer.toLowerCase() == basic.back.toLowerCase()) {
-            console.log("That's correct!! The answer is: " + basic.back + "\n\n");
+            console.log("That's CORRECT! The answer is: \n" + basic.back + "\n\n");
             right++;
         } else {
-            console.log("Sorry.  The correct answer is: " + basic.back + "\n\n");
+            console.log("SRRY! The correct answer is:\n" + basic.back + "\n\n");
             wrong++;
         }
-        // cloze-deleted here
-        var temp = cloze.text.replace("...", cloze.cloze);
+        // cloze-deleted here;
         if (answ.answer.toLowerCase() == cloze.cloze.toLowerCase()) {
-            console.log("That's correct.  " + temp + "\n\n");
+            console.log("That's CORRECT!\n" + cloze.wholeAnswer() + "\n\n");
             right++;
         } else {
-            console.log("Sorry.  " + temp + "\n\n");
+            console.log("SORRY!\n" + cloze.wholeAnswer() + "\n\n");
             wrong++;
         }
 
